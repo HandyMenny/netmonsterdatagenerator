@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetMonster Data Generator</title>
+  <script type="module" crossorigin src="/netmonsterdatagenerator/assets/index-dbd5f6a6.js"></script>
+  <link rel="stylesheet" href="/netmonsterdatagenerator/assets/index-6b95562a.css">
+  <script type="module">import.meta.url;import("_").catch(()=>1);async function* g(){};window.__vite_is_modern_browser=true;</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+</head>
+<body class="bg-light rounded-0">
+<div class="container vh-100 p-5 d-flex flex-column align-items-center justify-content-center">
+  <h1>NetMonster Data Generator</h1>
+  <form class="mt-4 mw-100">
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2 flex-column flex-md-row">
+          <span class="input-group-text rounded-0 big" id="preset-label">Preset</span>
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-tim"
+                 autocomplete="off"
+                 checked>
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-tim">TIM</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-vf"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-vf">Vodafone</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-w3"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-w3">WINDTRE</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-iliad"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-iliad">iliad</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="samples" class="input-group-text rounded-0 big" id="samples-label">Samples</label>
+          <input type="number" class="form-control rounded-0" id="samples" min="1" max="1000" value="100"
+                 placeholder="Samples">
+        </div>
+      </div>
+    </div>
+    <div class="row d-none">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="invalid" class="input-group-text rounded-0 big" id="invalid-label">Invalid samples</label>
+          <input type="number" class="form-control rounded-0" id="invalid" min="0" max="100" value="0"
+                 placeholder="% of invalid samples">
+          <span class="input-group-text rounded-0" id="invalid-%">%</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="url" class="input-group-text rounded-0 big" id="url-label">Endpoint URL</label>
+          <input type="text" class="form-control rounded-0" id="url"
+                 placeholder="Ex. http://localhost:8080/api">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="json" class="input-group-text rounded-0 big" id="json-label">JSON body</label>
+          <div class="form-control rounded-0 language-json" id="json"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col d-flex gap-4">
+        <button type="button" class="btn btn-dark flex-fill rounded-0" id="generate">Generate</button>
+        <button type="button" class="btn btn-dark flex-fill rounded-0" id="send" disabled>Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><p id="modal-text" class="text-center"></p></div>
+    </div>
+  </div>
+</div>
+
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="/netmonsterdatagenerator/assets/polyfills-legacy-8f8ed208.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="/netmonsterdatagenerator/assets/index-legacy-14ab4b0d.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>
