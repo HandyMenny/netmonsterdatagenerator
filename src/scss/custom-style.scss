@@ -1,0 +1,24 @@
+.input-group-text.big {
+  min-width: 140px;
+}
+
+.flex-fill {
+  flex-basis: 0 !important;
+}
+
+.language-json {
+  white-space: pre;
+  height: 33vh;
+  overflow: auto;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+form {
+  min-width: 45vw;
+}
+
+.form-control:focus {
+  border-color: #212529 !important;
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.25) !important;
+}

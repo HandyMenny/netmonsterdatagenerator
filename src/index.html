@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetMonster Data Generator</title>
+</head>
+<body class="bg-light rounded-0">
+<div class="container vh-100 p-5 d-flex flex-column align-items-center justify-content-center">
+  <h1>NetMonster Data Generator</h1>
+  <form class="mt-4 mw-100">
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2 flex-column flex-md-row">
+          <span class="input-group-text rounded-0 big" id="preset-label">Preset</span>
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-tim"
+                 autocomplete="off"
+                 checked>
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-tim">TIM</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-vf"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-vf">Vodafone</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-w3"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-w3">WINDTRE</label>
+
+          <input type="radio" class="btn-check flex-fill rounded-0" name="options" id="preset-iliad"
+                 autocomplete="off">
+          <label class="btn btn-outline-dark flex-fill rounded-0" for="preset-iliad">iliad</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="samples" class="input-group-text rounded-0 big" id="samples-label">Samples</label>
+          <input type="number" class="form-control rounded-0" id="samples" min="1" max="1000" value="100"
+                 placeholder="Samples">
+        </div>
+      </div>
+    </div>
+    <div class="row d-none">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="invalid" class="input-group-text rounded-0 big" id="invalid-label">Invalid samples</label>
+          <input type="number" class="form-control rounded-0" id="invalid" min="0" max="100" value="0"
+                 placeholder="% of invalid samples">
+          <span class="input-group-text rounded-0" id="invalid-%">%</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="url" class="input-group-text rounded-0 big" id="url-label">Endpoint URL</label>
+          <input type="text" class="form-control rounded-0" id="url"
+                 placeholder="Ex. http://localhost:8080/api">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-2">
+          <label for="json" class="input-group-text rounded-0 big" id="json-label">JSON body</label>
+          <div class="form-control rounded-0 language-json" id="json"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col d-flex gap-4">
+        <button type="button" class="btn btn-dark flex-fill rounded-0" id="generate">Generate</button>
+        <button type="button" class="btn btn-dark flex-fill rounded-0" id="send" disabled>Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><p id="modal-text" class="text-center"></p></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
